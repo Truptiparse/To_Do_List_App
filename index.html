@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 My To-Do List</h1>
+            <button id="darkModeBtn">🌙 Dark Mode</button>
+        </header>
+
+        <!-- Task Stats -->
+        <div class="stats">
+            <div class="stat-box">
+                <h3 id="pendingCount">0</h3>
+                <p>Pending</p>
+            </div>
+            <div class="stat-box">
+                <h3 id="completedCount">0</h3>
+                <p>Completed</p>
+            </div>
+        </div>
+
+        <!-- Add Task Form -->
+        <div class="add-task">
+            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <select id="taskCategory">
+                <option value="General">General</option>
+                <option value="Work">Work</option>
+                <option value="Study">Study</option>
+                <option value="Personal">Personal</option>
+            </select>
+            <select id="taskPriority">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <input type="date" id="taskDueDate">
+            <button id="addBtn">Add Task</button>
+        </div>
+
+        <!-- Search and Filter -->
+        <div class="filters">
+            <input type="text" id="searchInput" placeholder="Search tasks...">
+            <select id="filterStatus">
+                <option value="all">All Tasks</option>
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+            </select>
+            <select id="filterCategory">
+                <option value="all">All Categories</option>
+                <option value="General">General</option>
+                <option value="Work">Work</option>
+                <option value="Study">Study</option>
+                <option value="Personal">Personal</option>
+            </select>
+        </div>
+
+        <!-- Task List -->
+        <ul id="taskList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
